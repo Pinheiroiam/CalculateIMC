@@ -42,21 +42,20 @@ body, input, button {
 }
 
 .card {
-  background-color: hsla(0, 0%, 100%, 0.6);
+  background-color: hsla(0, 0%, 100%, 0.7);
   padding: 4.8rem 6.4rem 6.4rem;
-  max-width: 42.8rem;
+  max-width: 60rem;
   margin-inline: auto;
 
   box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
   border-radius: 0.6rem;
-
-
 }
 
 .title {
   font-size: 3.2rem;
   line-height: 4rem;
   color: var(--tt-heading);
+  text-align: center;
 }
 
 form {
@@ -148,6 +147,16 @@ button:hover {
   position: relative;
 }
 
+.cardModal {
+  background-color: hsla(0, 0%, 87%, 1);
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 60rem;
+  margin-inline: auto;
+
+  box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
+  border-radius: 0.6rem;
+}
+
 .modal button {
   background: none;
   border: none;
@@ -192,4 +201,24 @@ button:hover {
   opacity: 0;
   transform: translateY(-40px);
   transition: transform .5s;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.levelIMC {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: var(--tt-heading);
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.advise {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--tt-heading);
+  text-align:justify;
 }

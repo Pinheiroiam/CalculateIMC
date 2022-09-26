@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2></h2>
+    <h3></h3>
+    <p></p>
+    <script type="module">
+      import { Level } from './js/level.js'
+      import { calculateIMC } from './js/utils.js'
+
+      const imc = document.querySelector('h2')
+      const levelIMC = document.querySelector('h3')
+      const advise = document.querySelector('p')
+      const result = calculateIMC(90, 170)
+
+      if (result < 16) {
+        result.textContent = 'Inválido'
+      } else if ((result >= 16, result < 17)) {
+        levelIMC.textContent = Level.levelOne.levelIMC
+        advise.textContent = Level.levelOne.advise
+      } else if ((result >= 17, result < 18.5)) {
+        levelIMC.textContent = Level.levelTwo.levelIMC
+        advise.textContent = Level.levelTwo.advise
+      } else if ((result >= 18.5, result < 25)) {
+        levelIMC.textContent = Level.levelThree.levelIMC
+        advise.textContent = Level.levelThree.advise
+      } else if ((result >= 25, result < 30)) {
+        levelIMC.textContent = Level.levelFour.levelIMC
+        advise.textContent = Level.levelFour.advise
+      } else if ((result >= 30, result < 35)) {
+        levelIMC.textContent = Level.levelFive.levelIMC
+        advise.textContent = Level.levelFive.advise
+      } else if ((result >= 35, result < 40)) {
+        levelIMC.textContent = Level.levelSix.levelIMC
+        advise.textContent = Level.levelSix.advise
+      } else if (result > 40) {
+        levelIMC.textContent = Level.levelSeven.levelIMC
+        advise.textContent = Level.levelSeven.advise
+      }
+
+      console.log(imc)
+    </script>
+  </body>
+</html>
